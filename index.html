@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Horde — Assistance</title>
+<meta name="description" content="La Horde, jeu de stratégie et de monstres pour iPhone : assistance, questions fréquentes et contact.">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var q = location.search.match(/[?&]lang=(fr|en)/), l = q ? q[1] : null;
+    if (!l) { try { l = localStorage.getItem("lang"); } catch (e) {} }
+    if (!l) l = (navigator.language || "fr").toLowerCase().indexOf("fr") === 0 ? "fr" : "en";
+    document.documentElement.className = "js show-" + l;
+    document.documentElement.lang = l;
+    window.setLang = function (x) {
+      try { localStorage.setItem("lang", x); } catch (e) {}
+      document.documentElement.className = "js show-" + x;
+      document.documentElement.lang = x;
+      return false;
+    };
+  })();
+</script>
+</head>
+<body>
+<main>
+  <div class="top">
+    <nav class="langs">
+      <a href="?lang=fr" onclick="return setLang('fr')" id="l-fr">FR</a><a href="?lang=en" onclick="return setLang('en')" id="l-en">EN</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <img src="icon.png" alt="La Horde">
+    <h1>La Horde</h1>
+    <p class="tagline" lang="fr">Lâche ta horde et rase les camps ennemis&nbsp;!</p>
+    <p class="tagline" lang="en">Unleash your horde and raze the enemy camps!</p>
+  </header>
+
+  <section lang="fr">
+    <h2>Assistance</h2>
+    <div class="card contact">
+      <p>Une question, un souci, une idée&nbsp;? Écris-nous, on répond en français ou en anglais.</p>
+      <a class="btn" href="mailto:thomasmuller2@gmail.com?subject=La%20Horde">thomasmuller2@gmail.com</a>
+    </div>
+
+    <h2>Questions fréquentes</h2>
+    <div class="card">
+      <h3>Où est enregistrée ma progression&nbsp;?</h3>
+      <p>Sur ton iPhone, et dans ses sauvegardes iCloud ou ordinateur si tu les as activées. Le jeu n'a pas de compte en ligne&nbsp;: si tu supprimes l'app, ta progression est effacée.</p>
+    </div>
+    <div class="card">
+      <h3>J'ai acheté des gemmes mais je ne les ai pas reçues.</h3>
+      <p>Ferme complètement le jeu, puis relance-le&nbsp;: un achat interrompu est livré au lancement suivant. Si le problème continue, écris-nous en indiquant la date de l'achat.</p>
+    </div>
+    <div class="card">
+      <h3>Comment demander un remboursement&nbsp;?</h3>
+      <p>Les paiements sont gérés par Apple. Tu peux demander un remboursement sur <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+    </div>
+    <div class="card">
+      <h3>Faut-il une connexion Internet&nbsp;?</h3>
+      <p>Non, La Horde se joue hors ligne. Une connexion n'est nécessaire que pour acheter des gemmes.</p>
+    </div>
+    <div class="card">
+      <h3>Comment changer la langue, le son ou les vibrations&nbsp;?</h3>
+      <p>Sur la carte, touche la roue dentée en haut à droite&nbsp;: tu y trouveras la musique, les sons, les vibrations et la langue.</p>
+    </div>
+  </section>
+
+  <section lang="en">
+    <h2>Support</h2>
+    <div class="card contact">
+      <p>A question, a problem, an idea? Write to us, we answer in English or French.</p>
+      <a class="btn" href="mailto:thomasmuller2@gmail.com?subject=La%20Horde">thomasmuller2@gmail.com</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card">
+      <h3>Where is my progress saved?</h3>
+      <p>On your iPhone, and in its iCloud or computer backups if you use them. The game has no online account: deleting the app erases your progress.</p>
+    </div>
+    <div class="card">
+      <h3>I bought gems but didn't receive them.</h3>
+      <p>Close the game completely, then open it again: an interrupted purchase is delivered at the next launch. If it still doesn't work, write to us with the date of the purchase.</p>
+    </div>
+    <div class="card">
+      <h3>How do I ask for a refund?</h3>
+      <p>Payments are handled by Apple. You can request a refund at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+    </div>
+    <div class="card">
+      <h3>Do I need an Internet connection?</h3>
+      <p>No, La Horde plays offline. You only need a connection to buy gems.</p>
+    </div>
+    <div class="card">
+      <h3>How do I change the language, sound or vibrations?</h3>
+      <p>On the map, tap the gear at the top right: music, sounds, vibrations and language are there.</p>
+    </div>
+  </section>
+
+  <footer>
+    <a href="confidentialite.html" lang="fr">Politique de confidentialité</a>
+    <a href="confidentialite.html?lang=en" lang="en">Privacy policy</a>
+    <p>© 2026 Thomas Muller</p>
+  </footer>
+</main>
+</body>
+</html>

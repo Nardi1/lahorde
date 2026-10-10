@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url("LilitaOne-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --bg-top: #22307a;
+  --bg-bottom: #0e1440;
+  --card: rgba(255, 255, 255, 0.07);
+  --card-line: rgba(255, 255, 255, 0.12);
+  --text: #eef1ff;
+  --muted: #b8c0e8;
+  --gold: #ffc93c;
+  --gold-deep: #f59e0b;
+  --link: #8fd3ff;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg-bottom); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 50% -10%, #3346a8 0%, transparent 60%),
+              linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 70%);
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+
+.top { display: flex; justify-content: flex-end; }
+
+.langs { display: inline-flex; border: 1px solid var(--card-line); border-radius: 999px; overflow: hidden; }
+.langs a {
+  padding: 6px 14px; color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14px;
+}
+.show-fr #l-fr, .show-en #l-en { background: var(--gold); color: #3a2400; }
+
+.hero { text-align: center; padding: 18px 0 8px; }
+.hero img {
+  width: 132px; height: 132px; border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+h1, h2 { font-family: "Lilita One", "Arial Rounded MT Bold", sans-serif; font-weight: 400; letter-spacing: 0.5px; }
+h1 {
+  margin: 18px 0 4px; font-size: 46px; line-height: 1.1; color: var(--gold);
+  text-shadow: 0 3px 0 #9a4a00, 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+.tagline { margin: 0; color: var(--muted); font-size: 18px; }
+
+h2 { font-size: 26px; margin: 34px 0 12px; color: #fff; }
+
+.card {
+  background: var(--card); border: 1px solid var(--card-line); border-radius: 18px; padding: 18px 20px; margin: 12px 0;
+}
+.card h3 { margin: 0 0 6px; font-size: 17px; color: #fff; }
+.card p { margin: 0; color: var(--muted); }
+.card p + p { margin-top: 8px; }
+
+.contact { text-align: center; }
+.contact .btn {
+  display: inline-block; margin-top: 10px; padding: 12px 26px; border-radius: 14px;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-deep) 100%); color: #3a2400;
+  font-family: "Lilita One", "Arial Rounded MT Bold", sans-serif; font-size: 20px; text-decoration: none;
+  box-shadow: 0 4px 0 #a85a00, 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+a { color: var(--link); }
+
+.policy h2 { font-size: 22px; margin-top: 28px; }
+.policy p, .policy li { color: var(--muted); }
+.policy strong { color: #fff; }
+.updated { text-align: center; color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 44px; }
+footer a { margin: 0 8px; }
+
+/* both languages show without script; the script keeps one */
+.js [lang="fr"]:not(html), .js [lang="en"]:not(html) { display: none; }
+.js.show-fr [lang="fr"]:not(html), .js.show-en [lang="en"]:not(html) { display: block; }
+
+@media (max-width: 420px) {
+  h1 { font-size: 38px; }
+  .hero img { width: 112px; height: 112px; border-radius: 26px; }
+}
